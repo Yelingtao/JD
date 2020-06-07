@@ -1,386 +1,484 @@
-.container {
-    width: 100%;
-}
-
-.nav-box {
+.top-nav {
     background-color: #e3e4e5;
     height: 30px;
-    border-bottom: 1px solid #ddd;
-    width: 100%;
 }
 
-.nav-box .nav {
+.style-red {
+    color: #e04444;
+}
+
+.top-nav nav {
     width: 1190px;
-    text-align: right;
-    margin: 0px auto;
+    min-width: 960px;
+    margin: 0 auto;
 }
 
-.nav-box .nav ul li {
+.top-nav nav ul {
+    float: right;
+}
+
+.top-nav nav ul li {
     display: inline-block;
-    padding: 0px 10px;
     height: 30px;
     line-height: 30px;
-    font-size: 12px;
+    padding: 0 10px;
     position: relative;
 }
 
-.nav-box .nav ul li:not(:last-child)::after {
-    content: "";
-    width: 1px;
+.top-nav nav ul li:not(:last-child)::after {
     height: 14px;
-    background: #ccc;
+    width: 1px;
+    background-color: #cccccc;
+    content: "";
     position: absolute;
     top: 8px;
-    right: 0;
+    right: 0px;
     display: block;
 }
 
-.nav-box .nav ul li a {
-    text-decoration: none;
-    color: #999;
-}
-
-.nav-box .nav ul li a:hover {
-    color:#f10215;
-}
-
-
-
-.header-box {
+.top-nav nav ul li.sub-nav:hover {
     background-color: #ffffff;
-    height: 140px;
-    
+
 }
 
-.header-box .header {
+.top-nav nav ul li.sub-nav:hover .sub-nav-box {
+    display: block;
+}
+
+
+
+.top-nav nav ul li.sub-nav .sub-nav-box {
+    background-color: #ffffff;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    border-radius: 0 0 8px 8px;
+    display: none;
+}
+
+
+
+.top-nav nav ul li.sub-nav .my-jd-list {
+    width: 280px;
+    padding: 15px 5px;
+}
+
+
+.top-nav nav ul li.sub-nav .down-items,
+.item-business {
+    border-top: 1px solid #f1f1f1;
+}
+
+.top-nav nav ul li.sub-nav .my-jd-list .item {
+    display: inline-block;
+    width: 125px;
+    white-space: nowrap;
+}
+
+.top-nav nav ul li.sub-nav .inner {
+    width: 140px;
+    background-color: #ffffff;
+    padding: 15px 5px;
+}
+
+.top-nav nav ul li.sub-nav .inner .item {
+    display: inline-block;
+    width: 56px;
+    white-space: nowrap;
+}
+
+.top-nav nav ul li.sub-nav .client-service {
+    width: 270px;
+    background-color: #ffffff;
+    padding: 15px 5px;
+}
+
+.top-nav nav ul li.sub-nav .client-service .item {
+    display: inline-block;
+    width: 130px;
+    white-space: nowrap;
+}
+
+.top-nav nav ul li.sub-nav .browser-nav {
     width: 1190px;
-    margin: 0px auto;
-    padding: 10px 0px;
-    display: flex;
+    background-color: #ffffff;
+    position: absolute;
+    left: -1000px;
+    padding: 15px 5px;
+    display: none;
 }
 
-.header-box .header .logo-box {
+.top-nav nav ul li.sub-nav .browser-nav .fore1,
+.fore2,
+.fore3 {
+    float: left;
+    width: 24%;
+    border-right: 1px solid #f1f1f1;
+
+}
+
+.top-nav nav ul li.sub-nav .browser-nav .fore4 {
+    float: left;
+    width: 24%;
+}
+
+.top-nav nav ul li.sub-nav .browser-nav .item {
+    display: inline-block;
+    width: 85px;
+    white-space: nowrap;
+}
+
+
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+header .header {
+    width: 1190px;
+    min-width: 960px;
+    margin: 0 auto;
+    height: 140px;
+    position: relative;
+}
+
+header .header .logo {
+    position: absolute;
+    left: 0;
+    top: 10px;
     width: 190px;
     height: 120px;
 }
 
-
-.header-box .header .search-box {
-    width: 790px;
-    padding: 0px 10px;
+header .header .logo img {
+    width: 100%;
+    height: 100%;
 }
 
-.header-box .header .search-box .search-eare {
-    padding: 10px 0px 0px 50px;
-    display: flex;
+header .header .search-area {
+    height: 60px;
+    position: absolute;
+    top: 30px;
+    left: 250px;
+    width: 750px;
 }
 
-.header-box .header .search-box .search-eare  input { 
-    border: 1px solid #f10215;
-    width: 500px;
-    height: 30px;
-    padding: 2px 10px;
+header .header .search-area .search-box input {
+    height: 26px;
+    width: 425px;
+    padding: 2px 44px 2px 17px;
+    border: 1px solid #e04444;
     outline: none;
+    line-height: 26px;
 }
 
-.header-box .header .search-box .search-eare .search-btn {
-    height: 34px;
-    line-height: 34px;
-    width: 50px;
-    background-color: #f10215;
-    border: 1px solid #f10215;
-    cursor: pointer;
-    color: #ffffff;
+header .header .search-area .search-box a span {
+    z-index: 1;
+    position: absolute;
+    top: 4px;
+    left: 453px;
+    height: 26px;
+    line-height: 26px;
 }
 
-.header-box .header .search-box .search-eare .cart-btn {
+header .header .search-area .search-box .search-btn {
+    width: 58px;
+    height: 32px;
+    line-height: 32px;
+    border: none;
+    background-color: #e1251b;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    position: absolute;
+    left: 487px;
+    top: 0;
+}
+
+header .header .search-area .search-box .shop-cart {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    width: 130px;
     height: 34px;
-    line-height: 34px;
-    width: 100px;
-    border:  1px solid #ccc;
+    background-color: #fff;
     text-align: center;
-    margin: 0px 0px 0px 50px;
-    cursor: pointer;
-    color: #f10215;
-}
-
-.header-box .header .search-box .search-eare .cart-btn:hover {
-    border:  1px solid #f10215;
-}
-
-.header-box .header .search-box .recommend {
-    font-size: 12px;
-    padding: 5px 0px 15px 50px;
-}
-
-.header-box .header .search-box .recommend a {
-    color: #999;  
-}
-
-
-.header-box .header .search-box ul li {
-    padding: 0px 11px;
-    display: inline-block;
-    
-}
-
-.header-box .header .search-box ul li a {
-    text-decoration: none;
-    color: #2e2c2c;
-}
-
-
-
-
-.content .wapper {
-    width: 1190px;
-    margin: 0px auto;
-    padding: 10px 0px;
-    display: flex;
-}
-
-.content .wapper .sidebar-box {
-    width: 190px;
-    background-color: #ffffff;
-    position: relative;
+    line-height: 34px;
+    border: 1px solid #e3e4e5;
     margin-right: 10px;
-    padding: 10px 0px;
 }
 
-.content .wapper .sidebar-box ul li {
-    height: 25px;
-    line-height: 25px;
-    padding: 0px 10px;
-    overflow: hidden;
+header .header .search-area .search-box .shop-cart i.iconfont {
+    font-size: 20px;
+    color: #e1251b;
 }
 
-.content .wapper .sidebar-box ul li:hover {
+header .header .search-area .search-box .shop-cart a {
+    color: #e1251b;
+}
+
+header .header .search-area .hot-words ul li {
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+header .header .search-area .hot-words ul li a {
+    font-size: 10px;
+
+}
+
+header .header .search-area .recommend {
+    position: absolute;
+    left: -40px;
+    bottom: 0;
+    top: 77px;
+}
+
+header .header .search-area .recommend ul li {
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 15px;
+}
+
+header .header .search-area .recommend ul li a {
+    font-size: 16px;
+}
+
+header .header .search-area .recommend ul li a:not(.style-red) {
+    color: #333333;
+}
+
+header .header .header-advice {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    width: 190px;
+    height: 120px
+}
+
+header .header .header-advice img {
+    width: 100%;
+    height: 100%;
+}
+
+.mod-content .mod-content-box {
+    width: 1190px;
+    margin: 10px auto;
+}
+
+.mod-content .mod-content-box .hierarchical-menu {
+    float: left;
+    height: 470px;
+    width: 190px;
+    margin-right: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.mod-content .mod-content-box .hierarchical-menu ul li {
+    margin: 5px 10px;
+}
+
+.mod-content .mod-content-box .hierarchical-menu ul li:hover {
     background-color: #d9d9d9;
 }
 
-.content .wapper .sidebar-box ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-.content .wapper .sidebar-box ul li a:hover {
-    color: #f10215;
-}
-
-.content .wapper .sidebar-box .sub-sidebar {
-    position: absolute;
-    top: 0px;
-    left: 190px;
-    z-index: 10;/*控制次导航栏出来的时候，要覆盖掉轮播图*/
-    background-color: #ffffff;
-    width: 900px;
-    padding: 10px 0px;
-    font-size: 12px;
-    display: none;
-    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
-}
-
-.content .wapper .sidebar-box .sub-sidebar.active {
+.mod-content .mod-content-box .hierarchical-menu ul li:hover .sub-menu {
     display: block;
 }
 
-.content .wapper .sidebar-box .sub-sidebar .left-box {
+
+.mod-content .mod-content-box .hierarchical-menu ul li .main-menu a {
+    font-size: 14px;
+    color: #333333;
+}
+
+.mod-content .mod-content-box .hierarchical-menu ul li .main-menu a:hover {
+    color: #e1251b;
+}
+
+.mod-content .mod-content-box .hierarchical-menu ul li .sub-menu {
+    position: absolute;
+    left: 190px;
+    top: 0px;
+    width: 1000px;
+    min-height: 470px;
+    z-index: 5;
+    background-color: #fff;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .left-box {
+    width: 800px;
+    min-height: 468px;
     float: left;
-    width: 700px;
 }
 
-.content .wapper .sidebar-box .sub-sidebar .left-box .menu-title {
-    margin: 5px 0px 15px 0px;
+.mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .left-box .menu-title {
+    overflow: hidden;
+    padding-left: 20px;
+    height: 24px;
+    margin: 20px 10px;
 }
 
-.content .wapper .sidebar-box .sub-sidebar .left-box .menu-title ul li {
-    display: inline-block;
+.mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .left-box .menu-title a:hover {
+    background-color: #e1251b;
 }
 
-
-.content .wapper .sidebar-box .sub-sidebar .left-box .menu-title .title-item {
-    background: #333333;
-    margin: 0px 10px 0px 10px;
-    padding: 5px 10px;
-    color: #ffffff;    
-    
-}
-
-.content .wapper .sidebar-box .sub-sidebar .left-box .menu-title .title-item:hover {
-    color: #f10215;
-}
-
-.content .wapper .sidebar-box .sub-sidebar .left-box dl {
-    display: flex;
-}
-
-.content .wapper .sidebar-box .sub-sidebar .left-box dt:not(:last-child) {
-    font-weight: bolder;
-    width: 65px;
-    text-align: right;
-    flex-shrink: 0; /*控制不被压缩空间，使其显示在一行*/
-    margin-bottom: 10px;
-}
-
-.content .wapper .sidebar-box .sub-sidebar .left-box dd a {
-    padding: 4px 8px 3px 8px;
-    white-space: nowrap; /*???*/
-}
-
-.content .wapper .sidebar-box .sub-sidebar .ringht-box {
-    float: right;
-    width: 168px;
-}
-
-.content .wapper .sidebar-box .sub-sidebar .ringht-box .pic-box {
-    margin: 0px 0px 10px 0px;
-}
-
-.content .wapper .sidebar-box .sub-sidebar .ringht-box .pic-box:last-child{
-    margin: 0px;
-}
-
-/*轮播图样式*/
-.content .wapper .slider-box {
+.mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .left-box .menu-title a {
+    float: left;
     margin-right: 10px;
+    padding: 0 10px;
+    height: 24px;
+    background-color: #333;
+    line-height: 24px;
+    color: #fff;
 }
 
-.content .wapper .slider-box .photo-frame {
+
+.mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .left-box .menu-title a i.iconfont {
+    font-size: 12px;
+}
+
+.mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .left-box dl {
+    clear: both;
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .left-box dl dt {
+    width: 70px;
+    text-align: right;
+    margin: 8px 10px 8px 0;
+    flex-shrink: 0;
+}
+
+
+.mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .left-box dl dt a {
+    font-weight: bolder;
+    color: #1c1f21;
+    white-space: nowrap;
+}
+
+.mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .left-box dl dd {
+    margin: 5px 8px;
+}
+
+
+.mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .left-box dl dd a {
+    overflow: hidden;
+    font-size: 12px;
+    padding: 4px 8px 4px 8px;
+    white-space: nowrap;
+}
+
+.mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .right-box {
+    width: 200px;
+    float: right;
+    padding-top: 20px;
+}
+
+.mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .right-box .pic-box {
+    height: 134px;
+    width: 168px;
+    margin: 10px 20px 0 0;
+}
+
+.mod-content .mod-content-box .slider {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mod-content .mod-content-box .slider.photo-frame {
     width: 590px;
     height: 470px;
-    overflow: hidden;
-    position: relative;
 }
 
-.content .wapper .slider-box .photo-frame .photo-content {
+.mod-content .mod-content-box .slider.photo-frame .photo-content {
     display: flex;
-}
-
-.content .wapper .slider-box .photo-frame .photo-content .photo-list {
-    flex-shrink: 0;
-    overflow: hidden;
-    cursor: pointer;
+    height: 100%;
 }
 
 
 
-.content .wapper .slider-box .left-btn {
-    background-color: rgba(0, 0, 0, 0.2);
+
+.mod-content .mod-content-box .slider .slider-left-btn {
     position: absolute;
-    top: 45%;
-    left: 0px;
-    width: 50px;
-    height: 50px;
-    color: #fff;
-    display: flex;
-    justify-content: center; /*垂直居中*/
-    align-items: center; /*水平居中*/
+    top: 50%;
+    left: 0;
+    width: 25px;
+    height: 35px;
+    line-height: 35px;
+    background-color: rgba(0, 0, 0, .15);
+    margin-top: -20px;
+    font-size: 20px;
+    z-index: 2;
+    border: none;
+    outline: none;
     cursor: pointer;
+    border-radius: 0 50% 50% 0;
 }
 
-.content .wapper .slider-box .right-btn {
-    background-color: rgba(0, 0, 0, 0.2);
+.mod-content .mod-content-box .slider .slider-right-btn {
     position: absolute;
-    top: 45%;
-    right: 0px;
-    width: 50px;
-    height: 50px;
-    color: #fff;
-    display: flex;
-    justify-content: center; /*垂直居中*/
-    align-items: center; /*水平居中*/
+    top: 50%;
+    right: 0;
+    width: 25px;
+    height: 35px;
+    line-height: 35px;
+    background-color: rgba(0, 0, 0, .15);
+    margin-top: -20px;
+    font-size: 20px;
+    z-index: 2;
+    border: none;
+    outline: none;
     cursor: pointer;
+    border-radius: 50% 0 0 50%;
 }
 
-
-.content .wapper .slider-box span {
-    font-size: 24px;
-}
-
-.content .wapper .slider-box .photoIndex-box {
+.mod-content .mod-content-box .slider .photo-index {
     position: absolute;
     bottom: 3%;
     left: 10%;
 }
 
-.content .wapper .slider-box .photoIndex-box > ol {
-    height: 14px;
+.mod-content .mod-content-box .slider .photo-index>ol {
     display: flex;
+    height: 14px;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
 }
 
-.content .wapper .slider-box .photoIndex-box > ol > li {
+.mod-content .mod-content-box .slider .photo-index>ol>li {
+    list-style: none;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #fff;
-    list-style: none;
+    background-color: #ffffff;
     cursor: pointer;
+    margin-right: 10px;
 }
 
-.content .wapper .slider-box .photoIndex-box > ol > li.active {
+.mod-content .mod-content-box .slider .photo-index>ol>li.active {
     background-color: #e1251b;
 }
 
 
-
-.content .wapper .advices-box {
+.mod-content .mod-content-box .mod-advices {
+    float: left;
     width: 190px;
+    height: 470px;
     margin-right: 10px;
-}
-
-.content .wapper .advices-box .pic-box {
-    height: 150px;
-    width: 190px;
-}
-
-.content .wapper .advices-box .pic-box:not(:last-child) {
-    margin-bottom: 10px;
-}
-
-.content .wapper .advices-box .pic-box img {
-    width: 100%;
-    height: 100%;
-}
-
-.content .wapper .info-box {
-    width: 190px;
     background-color: #fff;
 }
 
-.content .wapper .info-box .newsinfo-box{
+.mod-content .mod-content-box .mod-info {
+    float: right;
+    width: 190px;
     height: 470px;
+    background-color: #fff;
 }
-
-.content .wapper .info-box .newsinfo-box .new-title {
-    font-size: 16px;
-    font-weight: bold;
-    padding-bottom: 10px;
-}
-
-.content .wapper .info-box .newsinfo-box ul {
-    font-size: 12px;
-}
-
-.content .wapper .info-box .newsinfo-box ul li {
-    padding: 5px 0px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.content .wapper .info-box .newsinfo-boxx ul li a {
-    color: #666666;
-    text-decoration: none;
-}
-
-.content .wapper .info-box .newsinfo-box ul li a span {
-    color: #e1251b;
-    padding: 2px 4px;
-    background: rgba(225,37,27,.08);
-    margin-right: 5px;
-}
-
-

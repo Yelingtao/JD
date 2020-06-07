@@ -1,20 +1,28 @@
-*{
-    margin:0;
-    padding:0
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
-html,body {
-    width:100%
+html,
+body {
+    width: 100%;
+    min-width: 960px;
+    font: 12px/1.5 "PingFang SC",
+        "微软雅黑",
+        "Microsoft YaHei",
+        Helvetica,
+        "Helvetica Neue",
+        Tahoma,
+        Arial,
+        sans-serif;
+    color: #1c1f21;
 }
 
-html, body, ul, ol, li {
-    padding: 0px;
-    margin: 0px;
+a {
+    color: #999;
 }
-dl, dt, dd {
-    margin: 0px;
-    padding: 0px;
-}
+
 ul li {
     list-style: none;
 }
