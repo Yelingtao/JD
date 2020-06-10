@@ -1,4 +1,4 @@
-.top-nav {
+nav {
     background-color: #e3e4e5;
     height: 30px;
 }
@@ -7,17 +7,17 @@
     color: #e04444;
 }
 
-.top-nav nav {
+nav .top-nav {
     width: 1190px;
     min-width: 960px;
     margin: 0 auto;
 }
 
-.top-nav nav ul {
+nav .top-nav ul {
     float: right;
 }
 
-.top-nav nav ul li {
+nav .top-nav ul li {
     display: inline-block;
     height: 30px;
     line-height: 30px;
@@ -25,7 +25,7 @@
     position: relative;
 }
 
-.top-nav nav ul li:not(:last-child)::after {
+nav .top-nav ul li:not(:last-child)::after {
     height: 14px;
     width: 1px;
     background-color: #cccccc;
@@ -36,96 +36,95 @@
     display: block;
 }
 
-.top-nav nav ul li.sub-nav:hover {
+nav .top-nav ul li.sub-nav:hover {
     background-color: #ffffff;
 
 }
 
-.top-nav nav ul li.sub-nav:hover .sub-nav-box {
+nav .top-nav ul li.sub-nav:hover .sub-nav-box {
     display: block;
 }
 
 
 
-.top-nav nav ul li.sub-nav .sub-nav-box {
+nav .top-nav ul li.sub-nav .sub-nav-box {
     background-color: #ffffff;
     position: absolute;
     top: 30px;
     left: 0;
     border-radius: 0 0 8px 8px;
     display: none;
+    z-index: 10;
 }
 
 
 
-.top-nav nav ul li.sub-nav .my-jd-list {
+nav .top-nav ul li.sub-nav .my-jd-list {
     width: 280px;
     padding: 15px 5px;
 }
 
 
-.top-nav nav ul li.sub-nav .down-items,
+nav .top-nav ul li.sub-nav .down-items,
 .item-business {
     border-top: 1px solid #f1f1f1;
 }
 
-.top-nav nav ul li.sub-nav .my-jd-list .item {
-    display: inline-block;
+nav .top-nav ul li.sub-nav .my-jd-list .item {
     width: 125px;
-    white-space: nowrap;
 }
 
-.top-nav nav ul li.sub-nav .inner {
+nav .top-nav ul li.sub-nav .inner {
     width: 140px;
     background-color: #ffffff;
     padding: 15px 5px;
 }
 
-.top-nav nav ul li.sub-nav .inner .item {
-    display: inline-block;
+nav .top-nav ul li.sub-nav .inner .item {
     width: 56px;
-    white-space: nowrap;
 }
 
-.top-nav nav ul li.sub-nav .client-service {
+nav .top-nav ul li.sub-nav .client-service {
     width: 270px;
     background-color: #ffffff;
     padding: 15px 5px;
 }
 
-.top-nav nav ul li.sub-nav .client-service .item {
-    display: inline-block;
-    width: 130px;
-    white-space: nowrap;
+nav .top-nav ul li.sub-nav .client-service .item {
+    width: 120px;
 }
 
-.top-nav nav ul li.sub-nav .browser-nav {
+nav .top-nav ul li.sub-nav .browser-nav {
     width: 1190px;
     background-color: #ffffff;
     position: absolute;
-    left: -1000px;
+    left: -1020px;
     padding: 15px 5px;
     display: none;
 }
 
-.top-nav nav ul li.sub-nav .browser-nav .fore1,
+nav .top-nav ul li.sub-nav .browser-nav .fore1,
 .fore2,
-.fore3 {
+.fore3,
+.fore4 {
     float: left;
     width: 24%;
-    border-right: 1px solid #f1f1f1;
-
+    margin-right: 1%;
 }
 
-.top-nav nav ul li.sub-nav .browser-nav .fore4 {
-    float: left;
-    width: 24%;
+
+nav .top-nav ul li.sub-nav .browser-nav .item {
+    width: 80px;
 }
 
-.top-nav nav ul li.sub-nav .browser-nav .item {
+nav .top-nav ul li.sub-nav .item {
     display: inline-block;
-    width: 85px;
     white-space: nowrap;
+    margin-left: 10px;
+}
+
+nav .top-nav ul li.sub-nav h5 {
+    margin-left: 10px;
 }
 
 
@@ -166,8 +165,8 @@ header .header .search-area {
 header .header .search-area .search-box input {
     height: 26px;
     width: 425px;
-    padding: 2px 44px 2px 17px;
-    border: 1px solid #e04444;
+    padding: 1px 44px 1px 17px;
+    border: 3px solid #e04444;
     outline: none;
     line-height: 26px;
 }
@@ -183,8 +182,8 @@ header .header .search-area .search-box a span {
 
 header .header .search-area .search-box .search-btn {
     width: 58px;
-    height: 32px;
-    line-height: 32px;
+    height: 34px;
+    line-height: 34px;
     border: none;
     background-color: #e1251b;
     font-size: 20px;
@@ -206,15 +205,24 @@ header .header .search-area .search-box .shop-cart {
     line-height: 34px;
     border: 1px solid #e3e4e5;
     margin-right: 10px;
+    cursor: pointer;
+}
+
+header .header .search-area .search-box .shop-cart:hover {
+    border: 1px solid #e04444;
 }
 
 header .header .search-area .search-box .shop-cart i.iconfont {
     font-size: 20px;
     color: #e1251b;
+    height: 32px;
+    line-height: 32px;
 }
 
 header .header .search-area .search-box .shop-cart a {
     color: #e1251b;
+    height: 32px;
+    line-height: 32px;
 }
 
 header .header .search-area .hot-words ul li {
@@ -284,10 +292,6 @@ header .header .header-advice img {
     background-color: #d9d9d9;
 }
 
-.mod-content .mod-content-box .hierarchical-menu ul li:hover .sub-menu {
-    display: block;
-}
-
 
 .mod-content .mod-content-box .hierarchical-menu ul li .main-menu a {
     font-size: 14px;
@@ -300,18 +304,24 @@ header .header .header-advice img {
 
 .mod-content .mod-content-box .hierarchical-menu ul li .sub-menu {
     position: absolute;
-    left: 190px;
+    left: 191px;
     top: 0px;
     width: 1000px;
     min-height: 470px;
     z-index: 5;
     background-color: #fff;
-    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #f7f7f7;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.2);
     display: none;
 }
 
+.mod-content .mod-content-box .hierarchical-menu ul li .sub-menu.active {
+    display: block;
+}
+
 .mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .left-box {
-    width: 800px;
+    max-width: 80%;
+
     min-height: 468px;
     float: left;
 }
@@ -345,13 +355,13 @@ header .header .header-advice img {
 .mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .left-box dl {
     clear: both;
     display: flex;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .left-box dl dt {
     width: 70px;
     text-align: right;
-    margin: 8px 10px 8px 0;
+    margin: 5px;
     flex-shrink: 0;
 }
 
@@ -375,7 +385,7 @@ header .header .header-advice img {
 }
 
 .mod-content .mod-content-box .hierarchical-menu ul li .sub-menu .right-box {
-    width: 200px;
+    width: 20%;
     float: right;
     padding-top: 20px;
 }
@@ -387,58 +397,70 @@ header .header .header-advice img {
 }
 
 .mod-content .mod-content-box .slider {
-    float: left;
     margin-right: 10px;
     position: relative;
     overflow: hidden;
-}
-
-.mod-content .mod-content-box .slider.photo-frame {
-    width: 590px;
     height: 470px;
 }
 
-.mod-content .mod-content-box .slider.photo-frame .photo-content {
+
+.mod-content .mod-content-box .slider#main-slider,
+.slider#mod-advices {
+    float: left;
+}
+
+
+.mod-content .mod-content-box .slider#main-slider .photo-content {
     display: flex;
     height: 100%;
 }
 
+.mod-content .mod-content-box .slider#mod-advices .photo-content {
+    display: flex;
+    height: 32%;
+}
 
-
+.mod-content .mod-content-box .slider button {
+    width: 35px;
+    height: 60px;
+    line-height: 60px;
+    background-color: rgba(0, 0, 0, .2);
+    margin-top: -20px;
+    font-size: 30px;
+    z-index: 3;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
 
 .mod-content .mod-content-box .slider .slider-left-btn {
     position: absolute;
     top: 50%;
     left: 0;
-    width: 25px;
-    height: 35px;
-    line-height: 35px;
-    background-color: rgba(0, 0, 0, .15);
-    margin-top: -20px;
-    font-size: 20px;
-    z-index: 2;
-    border: none;
-    outline: none;
-    cursor: pointer;
     border-radius: 0 50% 50% 0;
 }
 
 .mod-content .mod-content-box .slider .slider-right-btn {
     position: absolute;
     top: 50%;
-    right: 0;
-    width: 25px;
-    height: 35px;
-    line-height: 35px;
-    background-color: rgba(0, 0, 0, .15);
-    margin-top: -20px;
-    font-size: 20px;
-    z-index: 2;
-    border: none;
-    outline: none;
-    cursor: pointer;
     border-radius: 50% 0 0 50%;
+    right: 0;
 }
+
+.mod-content .mod-content-box .slider button {
+    display: none;
+}
+
+.mod-content .mod-content-box .slider:hover button {
+    display: block;
+}
+
+.mod-content .mod-content-box .slider button:hover {
+    background-color: rgba(255, 255, 255, .2);
+    color: rgba(0, 0, 0);
+    transition: background .3s ease;
+}
+
 
 .mod-content .mod-content-box .slider .photo-index {
     position: absolute;
@@ -467,18 +489,232 @@ header .header .header-advice img {
     background-color: #e1251b;
 }
 
-
-.mod-content .mod-content-box .mod-advices {
-    float: left;
-    width: 190px;
-    height: 470px;
-    margin-right: 10px;
-    background-color: #fff;
+.mod-content .mod-content-box .slider .photo-content .photo-list img {
+    width: 100%;
+    height: 100%;
 }
+
 
 .mod-content .mod-content-box .mod-info {
     float: right;
     width: 190px;
     height: 470px;
     background-color: #fff;
+}
+
+.mod-content .mod-content-box .mod-info .user-info {
+    height: 15%;
+    width: 100%;
+    position: relative;
+}
+
+.mod-content .mod-content-box .mod-info .user-info .user-avatar {
+    position: absolute;
+    left: 20px;
+    top: -4px;
+    width: 44px;
+    height: 44px;
+}
+
+.mod-content .mod-content-box .mod-info .user-info .user-avatar a.user-avatar-lk {
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+}
+
+
+.mod-content .mod-content-box .mod-info .user-info .user-avatar .user-avatar-lk img {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.mod-content .mod-content-box .mod-info .user-info .user-avatar a img {
+    vertical-align: middle;
+    border: 0;
+    border-radius: 50%;
+}
+
+.mod-content .mod-content-box .mod-info .user-info .user-show {
+    position: absolute;
+    top: 16px;
+    left: 74px;
+    right: 10px;
+    font-size: 12px;
+}
+
+.mod-content .mod-content-box .mod-info .user-profit {
+    height: 7%;
+    font-size: 0;
+    text-align: center;
+}
+
+
+.mod-content .mod-content-box .mod-info .user-profit .user_profit_lk {
+    display: inline-block;
+    margin: 0 5px;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 13px;
+    background: #e1251b;
+    color: #fff;
+}
+
+.mod-content .mod-content-box .mod-info .user-profit .user_profit_lk.user_profit_lk_plus {
+    background: #363634;
+    color: #e5d790;
+}
+
+.mod-content .mod-content-box .mod-info .user-profit .user_profit_lk.user_profit_lk_plus:hover {
+    background: #e1251b;
+    color: #fff;
+    transition: background .3s ease;
+}
+
+.mod-content .mod-content-box .mod-info .news-info {
+    height: 28%;
+    width: 100%;
+    border-top: 1px solid #f1f1f1;
+    position: relative;
+}
+
+.mod-content .mod-content-box .mod-info .news-info .news-head {
+    height: 20px;
+    padding: 10px 0 0;
+    line-height: 20px;
+    font-size: 0;
+    margin-bottom: 8px;
+}
+
+.mod-content .mod-content-box .mod-info .news-info .news-head .news_tit {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 15px;
+    color: #333;
+}
+
+.mod-content .mod-content-box .mod-info .news-info .news-head .news_more {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.mod-content .mod-content-box .mod-info .news-info .news-list {
+    position: relative;
+    margin: 0 15px;
+    height: 88px;
+}
+
+.mod-content .mod-content-box .mod-info .news-info .news-list .news-item {
+    max-width: 160px;
+    height: 16px;
+    line-height: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #999;
+    margin-bottom: 6px;
+}
+
+.mod-content .mod-content-box .mod-info .news-info .news-list .news-item .news_tag {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    height: 16px;
+    width: 35px;
+    line-height: 16px;
+    text-align: center;
+    vertical-align: 0;
+    color: #e1251b;
+    background-color: rgba(225, 37, 27, .08);
+    margin-right: 6px;
+}
+
+.mod-content .mod-content-box .mod-info .service-info {
+    height: 50%;
+    width: 100%;
+    border-top: 1px solid #f1f1f1;
+    position: relative;
+}
+
+.mod-content .mod-content-box .mod-info .service-info .service-entry {
+    overflow: hidden;
+    padding: 5px .5px;
+    background: #fff;
+}
+
+.mod-content .mod-content-box .mod-info .service-info .service-entry .service-list {
+    padding-top: 5px;
+    height: 225px;
+}
+
+.mod-content .mod-content-box .mod-info .service-info .service-entry .service-list .service-item {
+    position: relative;
+    float: left;
+    width: 63px;
+    height: 55px;
+    background: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.mod-content .mod-content-box .mod-info .service-info .service-entry .service-list .service-item a {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.mod-content .mod-content-box .mod-info .service-info .service-entry .service-list .service-item a .service-icon {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    margin: 0 auto;
+    display: block;
+}
+
+.mod-content .mod-content-box .mod-info .service-info .service-entry .service-list .service-item a img {
+    width: 28px;
+    height: 28px;
+    border: 0;
+    vertical-align: middle;
+}
+
+.mod-content .mod-content-box .mod-info .service-info .service-entry .service-list .service-item a .service-icon-img {
+    display: block;
+}
+
+.mod-content .mod-content-box .mod-info .service-info .service-entry .service-list .service-item a .service-icon-img-hover {
+    display: none;
+}
+
+.mod-content .mod-content-box .mod-info .service-info .service-entry .service-list .service-item:hover .service-icon-img {
+    display: none;
+}
+
+.mod-content .mod-content-box .mod-info .service-info .service-entry .service-list .service-item:hover .service-icon-img-hover {
+    display: block;
+}
+
+.mod-content .mod-content-box .mod-info .service-info .service-entry .service-list .service-item a .service-txt {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    border-bottom: 2px solid #fff;
+    color: #333;
+    transition: color .15s ease;
+}
+
+.mod-content .mod-content-box .mod-info .service-info .service-pop {
+    position: absolute;
+    top: 100%;
+    height: 50%;
+    width: 100%;
+    background-color: #fff;
+    transition: all .2s ease;
+    display: none;
 }

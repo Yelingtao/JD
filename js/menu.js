@@ -4,7 +4,7 @@ class Menu {
     constructor(id) {
         this.box = document.querySelector(id);/**获取到当前节点 */
         this.lis = this.box.querySelectorAll("li");
-        this.subSidebarItems = this.box.querySelectorAll(".sub-sidebar");
+        this.subSidebarItems = this.box.querySelectorAll(".sub-menu");
 
         this.timer1 = null;
         this.timer2 = null;
